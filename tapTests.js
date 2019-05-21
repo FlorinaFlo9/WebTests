@@ -5,9 +5,11 @@ describe('angularjs homepage todo list', function() {
     page.getHomePage();
     expect(browser.getTitle()).toEqual("FlyTAP - Official TAP Site | TAP Air Portugal | TAP Air Portugal");  
   });
-  
-  it('should click on sign up button', function() {
-      page.clickSignUp();
-      expect(browser.getTitle()).toEqual("Sign up - Benefits | TAP Air Portugal");  
-    });
+
+  it('should go to sign in', function() {
+      page.clickLogin();
+      page.setUsername();
+      page.setPassword();   
+      page.clickLoginPopup();
+      });
   });

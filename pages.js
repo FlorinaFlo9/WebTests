@@ -1,14 +1,28 @@
-//first test case
 var HomePage = function() {
-  var SignUp = element(by.xpath('//*[@id="anchor-menu"]/div/div[1]/ul[2]/li[3]/a')); 
+    var login=element(by.xpath('//*[@id="js-tlog-modal-full-login"]'));
+    var userName=element(by.xpath('//*[@id="login-user-account-modal"]'));
+    var password=element(by.xpath('//*[@id="login-pass-account-modal"]'));
+    var loginPopup=element(by.xpath('//*[@id="login-save-account-submit-modal"]/span/span'));
 
-  this.clickSignUp = function() {
-    SignUp.click();
-  };
+    this.clickLogin = function() {
+        login.click();
+    };
 
-  this.getHomePage = function() {
-    browser.get('https://www.flytap.com');
-  };
+    this.getHomePage = function() {
+        browser.get('https://www.flytap.com');
+    };
+
+    this.setUsername = function() {
+        userName.sendKeys('testtttt');
+    }
+
+    this.setPassword = function() {
+        password.sendKeys('testtt2');
+    }
+
+    this.clickLoginPopup = function() {
+        loginPopup.click();
+    }
 };
 
 module.exports = new HomePage();
