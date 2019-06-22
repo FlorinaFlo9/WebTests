@@ -1,14 +1,15 @@
 //first test case
-var HomePage = function() {
+var DeltaHomePage = function() {
   var SignUp = element(by.xpath('//*[@id="anchor-menu"]/div/div[1]/ul[2]/li[3]/a')); 
 
   this.clickSignUp = function() {
     SignUp.click();
   };
 
-  this.getHomePage = function() {
+  this.getTapHomePage = function() {
     browser.get('https://www.flytap.com');
   };
+  
 };
 
-module.exports = new HomePage();
+module.exports = new DeltaHomePage();
